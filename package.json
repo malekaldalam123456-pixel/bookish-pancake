@@ -1,0 +1,17 @@
+{
+  "name": "earn-it-server",
+  "version": "4.0.0",
+  "description": "EARN IT: accounts, revisioned state sync, and the PWA shell",
+  "main": "server.js",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node server.js",
+    "test:server": "node test/server.test.mjs",
+    "test:sw": "node test/sw.test.mjs",
+    "test:ui": "node test/app.test.mjs public/earn-it.html",
+    "test:e2e": "node test/e2e.test.mjs",
+    "test": "npm run test:server && npm run test:sw && npm run test:ui && npm run test:e2e"
+  },
+  "devDependencies": { "jsdom": "^26.1.0" }
+}
